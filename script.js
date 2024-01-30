@@ -1,14 +1,14 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
 function getComputerChoice() {
-  const choices = ["Rock", "Paper", "Scissors"];
+  const choices = ["rock", "paper", "scissors"];
   const randomIndex = Math.floor(Math.random() * choices.length);
   const randomChoice = choices[randomIndex];
   return randomChoice;
 }
 
-const computerChoice = getComputerChoice();
-console.log(computerChoice);
+const computerSelection = getComputerChoice();
+console.log(computerSelection);
 
 function playsSingleRound(playerSelection, computerSelection) {
   const playerChoice = playerSelection.toLowerCase();
@@ -30,7 +30,6 @@ function playsSingleRound(playerSelection, computerSelection) {
   ) {
     return `You Win! ${playerChoice} beats ${computerSelection}.`;
   } else {
-    // Computer wins
     return `You Lose! ${computerSelection} beats ${playerChoice}.`;
   }
 }
@@ -38,11 +37,6 @@ function playsSingleRound(playerSelection, computerSelection) {
 // write a new function play game
 // play game function should play 5 rounds of the game
 // keep score and report a winner or loser at the end
-// use prompt() to get input from the user
-// feel free to make the game console based if you like
-// feel free to make it pop up in a window
-// feel free to use alerts() to show the results
-
 function playGame() {
   let playerScore = 0;
   let computerScore = 0;
