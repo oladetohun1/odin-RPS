@@ -49,7 +49,7 @@ function playGame() {
   let round = 0;
   while (round < 5) {
     const playerSelection = prompt(
-      "Enter your choice: Rock, Paper or Scissors"
+      "Enter your choice: Rock, Paper or Scissors: "
     );
     const computerSelection = getComputerChoice();
     const result = playsSingleRound(playerSelection, computerSelection);
